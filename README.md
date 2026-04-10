@@ -1,5 +1,11 @@
 # Breadcrumb for CodeIgniter 4
 
+[![Packagist](https://img.shields.io/packagist/v/domprojects/codeigniter4-breadcrumb?label=Packagist)](https://packagist.org/packages/domprojects/codeigniter4-breadcrumb)
+[![License](https://img.shields.io/github/license/domProjects/codeigniter4-breadcrumb)](https://github.com/domProjects/codeigniter4-breadcrumb/blob/main/LICENSE)
+[![PHPUnit](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-breadcrumb/phpunit.yml?branch=main&label=PHPUnit)](https://github.com/domProjects/codeigniter4-breadcrumb/actions/workflows/phpunit.yml)
+[![Psalm](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-breadcrumb/psalm.yml?branch=main&label=Psalm)](https://github.com/domProjects/codeigniter4-breadcrumb/actions/workflows/psalm.yml)
+[![PHPStan](https://img.shields.io/github/actions/workflow/status/domProjects/codeigniter4-breadcrumb/phpstan.yml?branch=main&label=PHPStan)](https://github.com/domProjects/codeigniter4-breadcrumb/actions/workflows/phpstan.yml)
+
 Breadcrumb builder and controller integration for CodeIgniter 4 projects.
 
 ## Features
