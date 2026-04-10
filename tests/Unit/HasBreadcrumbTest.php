@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace domProjects\CodeIgniterBreadcrumb\Tests\Unit;
 
+use Config\App;
 use CodeIgniter\Test\CIUnitTestCase;
 use domProjects\CodeIgniterBreadcrumb\Traits\HasBreadcrumb;
 
@@ -24,6 +25,9 @@ final class HasBreadcrumbTest extends CIUnitTestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+        $appConfig                   = config(App::class);
+        $appConfig->supportedLocales = ['en', 'fr'];
 
         $routes = service('routes');
         $routes->get('breadcrumb-test/home', '\App\Controllers\Home::index', ['as' => 'breadcrumb.home']);
