@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of domprojects/codeigniter4-breadcrumb.
+ *
+ * (c) domProjects
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
+
 namespace domProjects\CodeIgniterBreadcrumb\Traits;
 
 use domProjects\CodeIgniterBreadcrumb\Config\Breadcrumb as BreadcrumbConfig;
@@ -47,6 +56,9 @@ trait HasBreadcrumb
         return $this;
     }
 
+    /**
+     * @param array<int|string, mixed> $params
+     */
     protected function breadcrumbController(string $label, string $routeName, array $params = []): self
     {
         $this->breadcrumb['controller'] = [
@@ -59,6 +71,9 @@ trait HasBreadcrumb
         return $this;
     }
 
+    /**
+     * @param array<int|string, mixed> $params
+     */
     protected function breadcrumbFunction(string $label, string $routeName, array $params = []): self
     {
         $this->breadcrumb['function'] = [
@@ -71,6 +86,9 @@ trait HasBreadcrumb
         return $this;
     }
 
+    /**
+     * @param array<int|string, mixed> $params
+     */
     protected function breadcrumbAppend(string $label, ?string $routeName = null, array $params = []): self
     {
         $url = null;
@@ -95,7 +113,7 @@ trait HasBreadcrumb
         $items = array_merge(
             $this->breadcrumb['root'] ?? [],
             $this->breadcrumb['controller'] ?? [],
-            $this->breadcrumb['function'] ?? []
+            $this->breadcrumb['function'] ?? [],
         );
 
         if ($items === []) {

@@ -1,14 +1,23 @@
 <?php
 
+/**
+ * This file is part of domprojects/codeigniter4-breadcrumb.
+ *
+ * (c) domProjects
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
+
 namespace domProjects\CodeIgniterBreadcrumb\Config;
 
 use CodeIgniter\Config\BaseConfig;
 
 class Breadcrumb extends BaseConfig
 {
-    public string $defaultTemplate = 'default';
+    public string $defaultTemplate  = 'default';
     public string $frontendTemplate = 'frontend';
-    public string $backendTemplate = 'backend';
+    public string $backendTemplate  = 'backend';
 
     /**
      * @var array<string, array<string, string>>

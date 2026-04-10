@@ -1,4 +1,4 @@
-# domprojects/codeigniter4-breadcrumb
+# Breadcrumb for CodeIgniter 4
 
 Breadcrumb builder and controller integration for CodeIgniter 4 projects.
 

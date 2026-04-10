@@ -1,7 +1,9 @@
 <?php
 
 /**
- * (c) domProjects (https://domprojects.com)
+ * This file is part of domprojects/codeigniter4-breadcrumb.
+ *
+ * (c) domProjects
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
@@ -11,28 +13,21 @@ namespace domProjects\CodeIgniterBreadcrumb;
 
 class Breadcrumb
 {
-    public const VERSION = '1.0.0';
+    public const VERSION = '1.0.1';
 
     /**
      * @var list<array{label: string, url: string|null}>
      */
     protected array $items = [];
 
-    /**
-     * @var array<string, string>
-     */
-    protected array $template = [];
-
     protected string $newline = "\n";
 
     /**
      * @param array<string, string> $template
      */
-    public function __construct(array $template = [])
+    public function __construct(protected array $template = [])
     {
         helper(['url', 'html']);
-
-        $this->template = $template;
     }
 
     /**
@@ -70,7 +65,7 @@ class Breadcrumb
             if (is_array($value) && isset($value['label'])) {
                 $this->add(
                     (string) $value['label'],
-                    isset($value['url']) ? (string) $value['url'] : null
+                    isset($value['url']) ? (string) $value['url'] : null,
                 );
 
                 continue;
@@ -128,9 +123,7 @@ class Breadcrumb
                 . $this->newline;
         }
 
-        $output .= $template['tag_close'] . $this->newline;
-
-        return $output;
+        return $output . ($template['tag_close'] . $this->newline);
     }
 
     /**
